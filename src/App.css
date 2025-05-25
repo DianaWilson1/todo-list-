@@ -1,0 +1,38 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the nav bar is fixed at the top for PC */
+.navbar {
+  display: flex;
+  justify-content: center;      /* Center the links horizontally */
+  gap: 1rem;                    /* 1rem gap between links */
+  padding: 1rem;
+  background-color: #f8f9fa;    /* Light background */
+  position: fixed;              /* Fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 7rem;
+  /* Optional: small shadow */
+}
+
+/* Add space below navbar so content is not hidden */
+body {
+  padding-top: 70px; /* Adjust depending on nav height */
+}
+
+/* Optional: Style the links */
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}

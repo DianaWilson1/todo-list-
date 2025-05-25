@@ -1,0 +1,28 @@
+/* Home.css */
+
+/* General layout for laptop screens */
+.main2 {
+  max-width: 900px;
+  margin: 40px auto;  /* centers content and adds vertical spacing */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -10rem;
+  margin-left:26rem;
+}
+
+.text {
+  color: #333;
+  margin: 10px 0;
+}
+
+.text:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.text:last-child {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+}
