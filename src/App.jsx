@@ -2,6 +2,7 @@ import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import CreateTask from "./components/CreateTask";
 import Home from "./components/Home";
 import Tasks from "./components/Tasks";
+import Edit from "./components/Edit";
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/createTask" element={<CreateTask />} />
+        <Route path="/editTask" element={<Edit />} />
         <Route path="/tasks" element={<Tasks />} />
       </Routes>
     </Router>
