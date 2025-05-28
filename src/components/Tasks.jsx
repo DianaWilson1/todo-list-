@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Tasks.css';
-import Edit from "./Edit";
 
 
 
@@ -48,7 +48,9 @@ function Tasks() {
             <li>
                <div style={{display: 'flex', alignItems: 'baseline'}}>
                 {todo.title}
-                <button onClick={() => {<Edit />}}>Edit</button>
+                <Link to="/editTask">
+                <button>Edit</button>
+                </Link>
                 <button onClick={() => deleteTodo(todo._id)}>Delete</button>
               </div>
 
