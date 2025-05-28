@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Tasks.css';
+import Edit from "./Edit";
 
 
 
@@ -47,7 +48,7 @@ function Tasks() {
             <li>
                <div style={{display: 'flex', alignItems: 'baseline'}}>
                 {todo.title}
-                <button onClick={() => console.log('edit')}>Edit</button>
+                <button onClick={() => {<Edit />}}>Edit</button>
                 <button onClick={() => deleteTodo(todo._id)}>Delete</button>
               </div>
 
