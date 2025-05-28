@@ -40,7 +40,7 @@ function CreateTask() {
   return (
     <>
       <div className="main1">
-        edit task here
+        <h2> Edit task here :</h2>
         <input placeholder="Name of Task" onChange={e => setTitle(e.target.value)} value={title} />
         <input placeholder="Description" onChange={e => setDescription(e.target.value)} value={description} />
         <h4>Does task completed?</h4>
