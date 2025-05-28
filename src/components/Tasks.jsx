@@ -1,13 +1,13 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import axios from 'axios';
 import './Tasks.css';
 
 
-
-
 function Tasks() {
   const [state, setState] = useState([]);
+  const navigate = useNavigate();
 
   const fetchTodos = async () => {
     axios.get('http://localhost:3000/todo/all')
@@ -21,8 +21,6 @@ function Tasks() {
   }
 
   useEffect(() => {
-    // Fetch todo
-
     fetchTodos();
   }, []);
 
@@ -37,7 +35,6 @@ function Tasks() {
 
   }
 
-  console.log(state);
   return (
     <>
       <h1>Your current tasks:</h1>
@@ -48,10 +45,7 @@ function Tasks() {
             <li>
                <div style={{display: 'flex', alignItems: 'baseline'}}>
                 {todo.title}
-                {/* <Link to="/edit">
-                <button>Edit</button>
-                </Link> */}
-                <button onClick={() => console.log(todo._id)}>Edit</button>
+                <button onClick={() => navigate(`/editTask/${todo._id}`)}>Edit</button>
                 <button onClick={() => deleteTodo(todo._id)}>Delete</button>
               </div>
 
