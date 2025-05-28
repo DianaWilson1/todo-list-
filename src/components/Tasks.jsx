@@ -6,35 +6,51 @@ import './Tasks.css';
 
 
 function Tasks() {
-  const [todos, setTodos] = useState([]);
+  const [state, setState] = useState([]);
+
+  const fetchTodos = async () => {
+    axios.get('http://localhost:3000/todo/all')
+      .then(response => {
+        setState(response.data.todos);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+  }
 
   useEffect(() => {
     // Fetch todo
-    const fetchTodos = async () => {
-      axios.get('http://localhost:3000/todo/all')
-        .then(response => {
-          setTodos(response.data.todos);
-        })
-        .catch(error => {
-          console.error(error);
-        });
 
-    }
     fetchTodos();
   }, []);
 
-  console.log(todos);
+  const deleteTodo = async (id) => {
+    axios.delete(`http://localhost:3000/todo/${id}`)
+      .then(response => {
+        fetchTodos()
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+  }
+
+  console.log(state);
   return (
     <>
-      <h1>Your current tasks</h1>
+      <h1>Your current tasks:</h1>
       {/* loop/map over the todos */}
       <ul>
-        {todos.map(todo => {
+        {state.map(todo => {
           return (
             <li>
-              <a href={`/todo/${todo._id}`}>
+               <div style={{display: 'flex', alignItems: 'baseline'}}>
                 {todo.title}
-              </a>
+                <button onClick={() => console.log('edit')}>Edit</button>
+                <button onClick={() => deleteTodo(todo._id)}>Delete</button>
+              </div>
+
             </li>
           )
         })}

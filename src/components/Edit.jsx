@@ -3,7 +3,14 @@ import './Edit.css';
 function Edit() {
   return (
     <>
-      <h1>Edit Todos</h1>
+      <h1>Edit Todos:</h1>
+      <input placeholder="Name of Task" />
+      <input placeholder="Description" />
+      <h8>Does task completed?</h8>
+      <div className='status'>
+        <button >Yes</button>
+        <button> No </button>
+      </div>
       <a href="/Tasks.jsx">Back to Fruits</a>
     </>
   )

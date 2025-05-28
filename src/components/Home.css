@@ -1,14 +1,88 @@
-/* Home.css */
-
-/* General layout for laptop screens */
-.main2 {
-  max-width: 900px;
-  margin: 40px auto;  /* centers content and adds vertical spacing */
-  padding: 20px;
-  text-align: center;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -10rem;
-  margin-left:26rem;
+}
+
+/* Ensure body takes full space and centers content */
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* Wrapper to hold both main1 and main2 */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Form container */
+.main1 {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input styles */
+.main1 input {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+.main1 input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styles */
+.main1 button {
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.main1 button:hover {
+  background-color: #0056b3;
+}
+
+/* Status box */
+.status {
+  width: 3rem;
+  gap: 10px;
+  display: flex;
+  border-radius: 1rem;
+}
+
+/* Text content below the form */
+.main2 {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
 }
 
 .text {
