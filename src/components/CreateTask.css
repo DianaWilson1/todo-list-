@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,12 +6,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Full-page container */
+
 body, html {
   height: 100%;
 }
 
-/* Center the .main container */
+
 .main1 {
   position: absolute;
   top: 50%;
@@ -31,7 +31,7 @@ body, html {
   gap: 20px;
 }
 
-/* Input styles */
+
 .main1 input {
   padding: 14px 16px;
   border: 1px solid #ccc;
@@ -45,7 +45,7 @@ body, html {
   outline: none;
 }
 
-/* Button styles */
+
 .main1 button {
   padding: 14px;
   background-color: #007bff;
@@ -56,6 +56,7 @@ body, html {
   cursor: pointer;
   transition: background-color 0.2s;
   border-radius: 3rem;
+  font-size: 1.5rem;
 }
 
 .status{
@@ -63,7 +64,17 @@ body, html {
   gap: 10px;
   display: flex;
   border-radius: 1rem;;
+  font-size: 1.5rem;
 }
 .main1 button:hover {
   background-color: #0056b3;
+}
+h2{
+  font-size:2rem;
+}
+h4{
+  font-size: 1.5rem;
+}
+button{
+  font-size: 1.5rem;
 }
