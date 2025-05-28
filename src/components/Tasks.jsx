@@ -1,5 +1,5 @@
 import { useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 import './Tasks.css';
 
@@ -48,9 +48,10 @@ function Tasks() {
             <li>
                <div style={{display: 'flex', alignItems: 'baseline'}}>
                 {todo.title}
-                <Link to="/editTask">
+                {/* <Link to="/edit">
                 <button>Edit</button>
-                </Link>
+                </Link> */}
+                <button onClick={() => console.log(todo._id)}>Edit</button>
                 <button onClick={() => deleteTodo(todo._id)}>Delete</button>
               </div>
 
